@@ -1,0 +1,161 @@
+* {
+    margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        text-decoration: none;
+}
+
+.contenedor-padre {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    width: 100%;
+    max-width: 75em;
+    background-color: red;
+    border-radius: 20px;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr 1fr 1fr 1fr 10em;
+    gap: 20px;
+    margin: 20px auto;
+    grid-template-areas:    'header header header'
+                            'productos productos informacion'
+                            'productos productos informacion'
+                            'productos productos informacion'
+                            'footer footer footer';
+}
+
+.contenedor-padre header {
+    background-color: white;
+    grid-area: header;
+    text-align: center;
+    width: 95%;
+    margin: 20px auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+}
+
+.contenedor-padre header img {
+width: 100px;
+margin: 20px auto;
+background-color: white;
+}
+.contenedor-padre header nav {
+    font-weight: bold;
+    grid-area: nav;
+    padding: 20px;
+    text-align: center;
+
+}
+
+.contenedor-padre header nav a {
+padding: 0 20px;
+color: black;
+}
+
+.contenedor-padre header nav a:hover {
+    padding: 20px;
+    color: white;
+    background-color: black;
+    border-radius: 20px;
+    }
+
+
+.productos {
+    grid-area: productos;
+}
+
+.producto-1, .producto-2, .producto-3 {
+    width: 95%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background-color: white;
+    margin: 20px;
+    border-radius: 20px;
+
+    /* EFECTO SOMBRA DE INTERNET*/
+    -webkit-box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0,0,0,0); 
+    box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0,0,0,0);
+
+}
+
+.producto-1 img, .producto-2 img, .producto-3 img {
+    padding: 10px;
+}
+
+.producto-mario-odissey, .producto-mario-strikers, .producto-mario-tennis {
+    height: 20em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.desc-juego {
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+justify-content: center;
+}
+
+.desc-juego p {
+text-align: justify;
+}
+
+.desc-juego h3, .desc-juego p, .desc-juego a {
+margin: 20px;
+}
+
+.desc-juego a {
+background-color: red;
+color: white;
+border-radius: 10px;
+text-align: center;
+font-weight: bold; 
+padding: 10px;
+}
+
+.desc-juego a:hover {
+    background-color: orange;
+    color: white;
+    border-radius: 10px;
+    text-align: center;
+    font-weight: bold; 
+    padding: 10px;
+    }
+
+.informacion {
+grid-area: informacion;
+background-color: white;
+margin: 20px;
+border-radius: 20px;
+
+/* EFECTO SOMBRA DE INTERNET*/
+-webkit-box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0,0,0,0); 
+box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0,0,0,0);
+}
+
+.informacion-hijo {
+width: 95%;
+margin:0 auto;
+}
+
+.informacion-hijo h3, .informacion-hijo p{
+margin: 20px;
+text-align: justify;
+}
+
+footer {
+    background-color: black;
+    color: white;
+    grid-area: footer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer h3 {
+font-size: 1em;  
+}
+
